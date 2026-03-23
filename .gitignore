@@ -1,0 +1,43 @@
+# =========================
+# Build directories
+# =========================
+build/
+build-*/
+
+# =========================
+# CMake files
+# =========================
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# =========================
+# Compiled files
+# =========================
+*.o
+*.a
+*.so
+*.out
+*.exe
+
+# =========================
+# Debug / logs
+# =========================
+*.log
+
+# =========================
+# Editor / IDE
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db

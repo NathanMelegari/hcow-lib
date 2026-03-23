@@ -1,0 +1,86 @@
+/*
+ * HCOW [v0.0.1] - A library for shell automation integrated in C code.
+ *
+ * OBJECTIVE:
+ *  Run process directly from the C file, faciliting work with servers,
+ *  systems in a geral.
+ *
+ * LIBRARY FUNCTIONS:
+ *  ats_log() => Print messages at the command line
+ *  ats_run() => Execute shell commands passing an array of instructions
+ *  ats_exists() => Verify if the destine defined exists
+ *  ats_cd() => Access directories passing a destine
+ *
+ * FUTURE UPDATES:
+ *
+ * 
+ * SUPPORT 2026-03-19:
+ *  Maintainer: Nathan Melegari
+ *  Contact: 
+ * 
+ * LICENSE:
+ *  GPL
+*/
+
+#ifndef HCOW_H
+#define HCOW_H
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+
+///////////////////////////////////////////
+/*
+ * Print messages at the command line
+ * Used:
+ *  ats_log("Hello world!\n");
+*/
+void hcow_log(const char *level, const char *fmt, ...);
+#define HCOW_INFO "INFO"
+#define HCOW_WARNING "WARNING"
+#define HCOW_ERROR "ERROR"
+
+///////////////////////////////////////////
+/*
+ * Execute shell commands passing an array of instructions
+ * Used:
+ *  char *new_directory[] = {"mkdir", "directory", NULL};
+ *  ats_run(new_directory);
+*/
+int hcow_run(char *args[]);
+
+//////////////////////////////////////////
+/*
+ * Verify if the object defined exists
+ * Used:
+ *  ats_exists("looking_object");
+ *  or
+ *  char *m = "looking_object";
+ *  ats_exists(m);
+*/
+int hcow_exists(const char *path);
+
+/////////////////////////////////////////
+/*
+ * Access directories passing a destine
+ * Used:
+ *  ats_cd("directory");
+ *  or
+ *  char *d = "directory";
+ *  ats_cd(d);
+*/
+int hcow_cd(const char *path);
+
+
+char *hcow_capture(char *args[]);
+
+
+pid_t hcow_run_async(char *args[]);
+
+
+char hcow_run_script(char *file);
+
+
+#endif
