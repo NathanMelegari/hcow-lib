@@ -6,20 +6,16 @@
  *  systems in a geral.
  *
  * LIBRARY FUNCTIONS:
- *  ats_log() => Print messages at the command line
- *  ats_run() => Execute shell commands passing an array of instructions
- *  ats_exists() => Verify if the destine defined exists
- *  ats_cd() => Access directories passing a destine
+ *  hcow_log() => Print messages at the command line
+ *  hcow_run() => Execute shell commands passing an array of instructions
+ *  hcow_exists() => Verify if the destine defined exists
+ *  hcow_cd() => Access directories passing a destine
  *
  * FUTURE UPDATES:
  *
  * 
- * SUPPORT 2026-03-19:
+ * SUPPORT 2026-03-23:
  *  Maintainer: Nathan Melegari
- *  Contact: 
- * 
- * LICENSE:
- *  GPL
 */
 
 #ifndef HCOW_H
