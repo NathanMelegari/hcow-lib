@@ -31,8 +31,8 @@ And insert into:
 ```bash
 #include <hcow/hcow.h>
 
-int main()
-{
+int main() {
+
     char *directory[] = {"mkdir", "hcow", NULL};
     hcow_run(directory);
 
@@ -43,7 +43,9 @@ int main()
         char *file[] = {"touch", "my_first_file.txt", NULL};
         hcow_run(file);
 
-        hcow_log(HCOW_INFO, "directory '%s' and the file '%s' have been created!", directory[1], file[1]);
+        hcow_log(HCOW_INFO,
+        "directory '%s' and the file '%s' have been created!",
+        directory[1], file[1]);
     }
 
     return 0;

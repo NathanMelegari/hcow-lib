@@ -8,8 +8,8 @@
 
 
 
-void hcow_log(const char *level, const char *fmt, ...)
-{
+void hcow_log(const char *level, const char *fmt, ...) {
+
 	if (strcmp(level, HCOW_WARNING) == 0) printf("\033[33m");
 	else if (strcmp(level, HCOW_ERROR) == 0) printf("\033[31m");
 	else printf("\033[32m");

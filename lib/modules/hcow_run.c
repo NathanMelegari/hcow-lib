@@ -6,8 +6,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-int hcow_run(char *args[])
-{
+int hcow_run(char *args[]) {
 
 	pid_t pid = fork();
 

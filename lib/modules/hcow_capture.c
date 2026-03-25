@@ -4,8 +4,7 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-char *hcow_capture(char *args[])
-{
+char *hcow_capture(char *args[]) {
 
 	int fd[2];
 	pipe(fd);
